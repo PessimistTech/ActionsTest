@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Test
         run: |
-          echo "Test"
+          echo "Test test/"
           exit 1
