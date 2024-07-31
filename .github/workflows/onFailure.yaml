@@ -1,0 +1,17 @@
+name: On Failure
+
+on:
+  workflow_run:
+    workflows: [Initial Test]
+    types:
+      - completed
+
+
+jobs:
+  failed:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workfow_run.conclusion == 'failure' && startsWith(github.ref_name, 'test/') }}
+    steps:
+      - name: something
+        run: echo 'ran on failure'
+    

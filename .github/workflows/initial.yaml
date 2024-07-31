@@ -1,0 +1,14 @@
+name: Initial Test
+
+on:
+  push:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: |
+          echo "Test"
+          exit 1
