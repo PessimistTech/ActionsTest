@@ -17,4 +17,5 @@ jobs:
           echo 'ran on failure'
           echo ${{ github.ref_name }}
           echo ${{ github.event.workflow_run.head_branch }}
+          echo ${{ startsWith(github.ref_name, 'test/') }}
     
