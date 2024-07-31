@@ -19,4 +19,5 @@ jobs:
           echo ${{ github.event.workflow_run.head_branch }}
           echo ${{ startsWith(github.ref_name, 'test/') }}
           echo ${{ startsWith(github.event.workflow_run.head_branch, 'test/') }}
+          echo ${{ github.run_id }}
     
