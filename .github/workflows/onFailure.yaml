@@ -10,8 +10,11 @@ on:
 jobs:
   failed:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' && startsWith(github.ref_name, 'test/') }}
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
       - name: something
-        run: echo 'ran on failure'
+        run: |
+          echo 'ran on failure'
+          echo ${{ github.ref_name }}
+          echo ${{ github.event.workflow_run.head_branch }}
     
