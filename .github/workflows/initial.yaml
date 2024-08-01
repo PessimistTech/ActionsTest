@@ -11,5 +11,5 @@ jobs:
       - name: Test
         run: |
           echo "Test test/"
-          echo something
+          echo 'something else'
           exit 1
