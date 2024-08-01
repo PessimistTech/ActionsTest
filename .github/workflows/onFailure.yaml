@@ -20,4 +20,8 @@ jobs:
           echo ${{ startsWith(github.ref_name, 'test/') }}
           echo ${{ startsWith(github.event.workflow_run.head_branch, 'test/') }}
           echo ${{ github.run_id }}
+          echo ${{ github.event.workflow_run.run_number }}
+          echo ${{ github.event.workflow_run.jobs_url }}
+          echo ${{ github.event.workflow_run.url }}
+          echo ${{ github.event.workflow_run.workflow_url }}
     
